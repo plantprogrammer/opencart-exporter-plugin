@@ -9,7 +9,7 @@
 	<operation>
 		<search><![CDATA[$data['heading_title'] = $this->language->get('heading_title');]]></search>
 		<add position="after"><![CDATA[
-				$data['export'] = $this->url->link('extension/module/exporter/export', 'token=' . $this->session->data['token'] . $url, true);
+				$data['export'] = $this->url->link('extension/module/exporter/export', 'token=' . $this->session->data['token'], true);
 				$data['button_export'] = $this->language->get('button_export');
 				$data['exporter_status'] = $this->config->get('exporter_status');
 		]]></add>

@@ -16,18 +16,6 @@ class ModelExtensionModuleExporter extends Model {
 		return $query;
 	}
 	
-	//disables the modification introduced in the installation.xml document
-	function disableMod()
-	{
-		$this->db->query("UPDATE oc_modification SET status = 0 WHERE status = 1");
-	}
-	
-	//enables the modification introduced in the installation.xml document
-	function enableMod()
-	{
-		$this->db->query("UPDATE oc_modification SET status = 1 WHERE status = 0");
-	}
-	
 }
 
 ?>

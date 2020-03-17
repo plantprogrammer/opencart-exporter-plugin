@@ -3,9 +3,16 @@ class ModelExtensionModuleExporter extends Model {
 
 	//runs a SQL command to get relevant data entries from the database 
 	function getResults()
-	{	
+	{
+		$orderTable = "";
+	
+		if (DB_PREFIX == "")
+		{
+			$orderTable = "`order`";
+		}
+
 		$query = $this->db->query("SELECT " . DB_PREFIX . "order.email, " . DB_PREFIX . "order.firstname, " . DB_PREFIX . "order.lastname, " . DB_PREFIX . "order_product.name, " . DB_PREFIX . "category_description.name as type
-		FROM " . DB_PREFIX . "order" 
+		FROM " . $orderTable 
 		. " INNER JOIN " . DB_PREFIX . "order_product" .  
 		" ON " . DB_PREFIX . "order_product.order_id = " . DB_PREFIX . "order.order_id"
 		. " INNER JOIN " . DB_PREFIX . "product_to_category" .  

@@ -25,25 +25,5 @@
 			]]></add>
 		</operation>
 </file>
- 
- <!--TODO: learn more about POST-->
- 
-<file path="acpanel/controller/extension/extension/module.php">
-	<operation>
-		<search><![CDATA[$this->load->model('extension/module');]]></search>
-		<add position="after"><![CDATA[
-		$this->load->model('extension/module/exporter');
-		if ($this->config->get('exporter_status') == 1)
-		{	
-			$this->model_extension_module_exporter->enableMod();
-		}
-		else
-		{
-			$this->model_extension_module_exporter->disableMod();
-		}
-		]]></add>
-	</operation>     
-</file>   
- 
-		
+	
 </modification>

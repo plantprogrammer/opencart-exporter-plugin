@@ -1,11 +1,10 @@
 <modification>
-	<name>Exporter</name>
-	<version>1.0</version>
 	<id>Exporter</id>
-	<code>Exporters</code>
+	<version>1.0</version>
+	<vqmver>2.4.1</vqmver>
 	<author>Ian</author>
 
-<file path="admin/controller/common/dashboard.php">
+<file path="acpanel/controller/common/dashboard.php">
 	<operation>
 		<search><![CDATA[$data['heading_title'] = $this->language->get('heading_title');]]></search>
 		<add position="after"><![CDATA[
@@ -16,7 +15,7 @@
 	</operation>     
 </file>   
 	
-<file path="admin/view/template/common/dashboard.tpl">
+<file path="acpanel/view/template/common/dashboard.tpl">
 		<operation>
 			<search><![CDATA[</ul>]]></search>
 			<add position="after"><![CDATA[
@@ -29,7 +28,7 @@
  
  <!--TODO: learn more about POST because right now, this is a hacky solution-->
  
-<file path="admin/controller/extension/extension/module.php">
+<file path="acpanel/controller/extension/extension/module.php">
 	<operation>
 		<search><![CDATA[$this->load->model('extension/module');]]></search>
 		<add position="after"><![CDATA[

@@ -148,9 +148,6 @@ class ControllerExtensionModuleExporter extends Controller
 		$this->load->model('setting/setting');
 		$this->model_setting_setting->editSetting('exporter', ['exporter_status' => 1]);
 		
-		//enables the modification if the module is installed
-		$this->load->model('extension/module/exporter');
-		$this->model_extension_module_exporter->enableMod();
 	}
 
 	public function uninstall()
@@ -158,9 +155,6 @@ class ControllerExtensionModuleExporter extends Controller
 		$this->load->model('setting/setting');
 		$this->model_setting_setting->deleteSetting('exporter');
 		
-		//disables the modification if the module is removed
-		$this->load->model('extension/module/exporter');
-		$this->model_extension_module_exporter->disableMod();
 	}
 	
 }

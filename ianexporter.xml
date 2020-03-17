@@ -26,7 +26,7 @@
 		</operation>
 </file>
  
- <!--TODO: learn more about POST because right now, this is a hacky solution-->
+ <!--TODO: learn more about POST-->
  
 <file path="acpanel/controller/extension/extension/module.php">
 	<operation>

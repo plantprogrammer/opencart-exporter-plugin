@@ -60,6 +60,7 @@ class ControllerExtensionModuleExporter extends Controller
 		if (isset($this->request->post['exporter_status'])) {
 			$data['exporter_status'] = $this->request->post['exporter_status'];
 		} else {
+			$data['exporter_status'] = $this->config->get('exporter_status');
 		}
 
 		$data['header'] = $this->load->controller('common/header');

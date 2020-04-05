@@ -4,7 +4,7 @@
 	<vqmver>2.4.1</vqmver>
 	<author>Ian</author>
 
-<file path="acpanel/controller/common/dashboard.php">
+<file path="admin/controller/common/dashboard.php">
 	<operation>
 		<search><![CDATA[$data['heading_title'] = $this->language->get('heading_title');]]></search>
 		<add position="after"><![CDATA[
@@ -15,7 +15,7 @@
 	</operation>     
 </file>   
 	
-<file path="acpanel/view/template/common/dashboard.tpl">
+<file path="admin/view/template/common/dashboard.tpl">
 		<operation>
 			<search><![CDATA[</ul>]]></search>
 			<add position="after"><![CDATA[
